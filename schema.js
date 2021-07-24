@@ -11,7 +11,7 @@ import {
 // Launch Types
 
 const LaunchType = new GraphQLObjectType({
-  name: "Lauch",
+  name: "Launch",
   fields: () => ({
     flight_number: { type: GraphQLInt },
     mission_name: { type: GraphQLString },
