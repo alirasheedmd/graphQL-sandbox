@@ -1,7 +1,6 @@
-import React, { Component } from "react"
 import gql from "graphql-tag"
 import { useQuery } from "@apollo/client"
-import LaunchItem from "../components/LaunchItem.jsx"
+import { LaunchItem } from "../components/LaunchItem.jsx"
 
 const LAUNCH_QUERY = gql`
   query LaunchesQuery {
@@ -21,11 +20,9 @@ export function Launches() {
       {loading ? (
         <h4>Loading...</h4>
       ) : (
-        data.map(
-          data.launches.map((launch) => (
-            <LaunchItem key={launch.flight_number} launch={launch} />
-          ))
-        )
+        data.launches.map((launch) => (
+          <LaunchItem key={launch.flight_number} launch={launch} />
+        ))
       )}
     </div>
   )

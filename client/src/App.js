@@ -1,11 +1,5 @@
 import "./App.css"
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
-} from "@apollo/client"
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client"
 import Launches from "./components/Launches.jsx"
 import { Component } from "react"
 
